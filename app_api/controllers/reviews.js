@@ -30,6 +30,7 @@ module.exports.reviewsCreate = function (req, res) {
      }
 };
 
+//POST method CRUD operation for reviews
 var doAddReview = function(req, res, provider) {
   if (!provider) {
     sendJsonResponse(res, 404, "providerid not found");
