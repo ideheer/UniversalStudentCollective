@@ -1,4 +1,10 @@
 var request = require('request');
+var apiOptions = {
+	server : "https://getmean-ideheer.c9users.io:8080"
+};
+if (process.env.NODE_ENV === 'production') {
+	apiOptions.server = "https://usc.herokuapp.com";
+}
 
 /* GET 'home' page */
 module.exports.login = function(req, res) {
